@@ -7,6 +7,7 @@
     <title>Student Management Project</title>
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/create.css">
 
 
 </head>
