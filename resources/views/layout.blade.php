@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management Project</title>
     <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+
 
 </head>
 
@@ -26,10 +28,12 @@
             <header class="header">
                 <h1>Student Management Project</h1>
             </header>
+            <div class="col-md-9">
+                @yield('content')
+            </div>
         </main>
-        <div class="content">
-            @yield('content')
-        </div>
+        
+
     </div>
 </body>
 
