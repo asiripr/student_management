@@ -38,7 +38,7 @@
                                                 aria-hidden="true"></i>
                                             Edit</button></a>
 
-                                    <form method="POST" action="{{ url('/students' . '/' . $item->id) }}"
+                                    <form method="POST" action="{{ url('/students' . '/' . $item->id) }}" 
                                         accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
