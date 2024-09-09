@@ -39,7 +39,8 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $students = Student::find($id);
+        return view('students.show')->with('students',$students);
     }
 
     /**
@@ -47,7 +48,8 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $students = Student::find($id);
+        return view('students.edit')->with('students',$students);
     }
 
     /**
@@ -55,7 +57,10 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $student = Student::find($id);
+        $input = $request->all();
+        $student -> update($input);
+        return redirect('student')->with('flash_message', 'Student Updated!');
     }
 
     /**

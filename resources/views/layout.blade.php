@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/create.css') }}">
-
-
 </head>
 
 <body>
@@ -17,12 +15,12 @@
         <aside class="sidebar">
             <h2>Menu</h2>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Student</a></li>
-                <li><a href="#">Teacher</a></li>
-                <li><a href="#">Payment</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Enrollment</a></li>
+                <li><a href="{{url('/')}}" class="active">Home</a></li>
+                <li><a href="{{url('/students')}}">Student</a></li>
+                <li><a href="{{url('/teacher')}}">Teacher</a></li>
+                <li><a href="{{url('/payment')}}">Payment</a></li>
+                <li><a href="{{url('/cources')}}">Courses</a></li>
+                <li><a href="{{url('/enrollment')}}">Enrollment</a></li>
             </ul>
         </aside>
         <main class="navbar">
