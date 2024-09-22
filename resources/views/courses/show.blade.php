@@ -5,9 +5,9 @@
     <div class="card-body">
 
         <div class="card-body">
-            <h5 class="card-title">Name : {{ $students->name }}</h5>
-            <p class="card-text">Address : {{ $students->syllabus }}</p>
-            <p class="card-text">Mobile : {{ $students->duration }}</p>
+            <h5 class="card-title">Name : {{ $courses->name }}</h5>
+            <p class="card-text">Address : {{ $courses->syllabus }}</p>
+            <p class="card-text">Mobile : {{ $courses->duration }}</p>
         </div>
 
         </hr>
