@@ -15,7 +15,9 @@ class TeacherController extends Controller
         $teachers = Teacher::all();
         return view('teachers.index')->with('teachers',$teachers);
     }
-
+// create migration -> before create table and model ===> php artisan make:migration create_teachers_table
+// to create table on db -> php artisan migrate
+// finally manually create the modeel
     /**
      * Show the form for creating a new resource.
      */
