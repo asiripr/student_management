@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="{{url('/')}}" class="active">Home</a></li>
                 <li><a href="{{url('/students')}}">Student</a></li>
-                <li><a href="{{url('/teacher')}}">Teacher</a></li>
+                <li><a href="{{url('/teachers')}}">Teacher</a></li>
                 <li><a href="{{url('/payment')}}">Payment</a></li>
                 <li><a href="{{url('/cources')}}">Courses</a></li>
                 <li><a href="{{url('/enrollment')}}">Enrollment</a></li>
