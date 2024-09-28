@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
 use Illuminate\Http\Request;
-use PHPUnit\Framework\Constraint\Count;
+use App\Models\Batch;
 
-class CourseController extends Controller
+class BatchController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $courses = Course::all();
-        return view('courses.index')->with('courses',$courses);
+        $batches = Batch::all();
+        return view('batches.index')->with('batches', $batches);
     }
 
     /**
@@ -22,7 +21,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        return view('courses.create');
+        return view('batches.create');
     }
 
     /**
@@ -31,8 +30,8 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        Course::create($input);
-        return redirect('courses')->with('flash_message','Course Added!');
+        Batch::create($input);
+        return redirect('batches')->with('flash_message','Batch Added!');
     }
 
     /**
@@ -40,8 +39,9 @@ class CourseController extends Controller
      */
     public function show(string $id)
     {
-        $courses = Course::find($id);
-        return view('courses.show')->with('courses', $courses);
+        $batches = Batch::find($id);
+        return view('batches.show')->with('batches',$batches);
+
     }
 
     /**
@@ -49,8 +49,8 @@ class CourseController extends Controller
      */
     public function edit(string $id)
     {
-        $courses = Course::find($id);
-        return view('courses.edit')->with('courses',$courses);
+        $batches = Batch::find($id);
+        return view('batches.edit')->with('batches',$batches);
     }
 
     /**
@@ -58,10 +58,10 @@ class CourseController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $course = Course::find($id);
-        $input = $request->all();
-        $course->update($input);
-        return redirect('courses')->with('flash_message','Course Updated!');
+        $batch = Batch::find($id);
+        $input = $request -> all();
+        $batch -> update($input);
+        return redirect('batches')->with('flash_message','Batch Updated!');
     }
 
     /**
@@ -69,7 +69,7 @@ class CourseController extends Controller
      */
     public function destroy(string $id)
     {
-        Course::destroy($id);
-        return redirect('courses')->with('flash_message','Course Deleted!');
+        Batch::destroy($id);
+        return redirect('batches')->with('flash_message','Batch deleted!');
     }
 }
