@@ -21,6 +21,7 @@
                 <li><a href="{{url('/payment')}}">Payment</a></li>
                 <li><a href="{{url('/courses')}}">Courses</a></li>
                 <li><a href="{{url('/enrollment')}}">Enrollment</a></li>
+                <li><a href="{{url('/batches')}}">Batches</a></li>
             </ul>
         </aside>
         <main class="navbar">

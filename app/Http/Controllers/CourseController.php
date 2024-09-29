@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
-use App\Models\Student;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\Constraint\Count;
 
