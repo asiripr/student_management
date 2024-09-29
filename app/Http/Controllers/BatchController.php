@@ -29,8 +29,16 @@ class BatchController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        Batch::create($input);
+        $validated = $request->validate([
+            'name'=>'required|string|max:255',
+            'course_id'=>'required|exists:courses,id',
+            'start_date'=>'required|date',
+        ],[
+            'course_id.exists' => 'the selected does not exists.',
+        ]);
+
+        Batch::create($validated);
+    
         return redirect('batches')->with('flash_message','Batch Added!');
     }
 
