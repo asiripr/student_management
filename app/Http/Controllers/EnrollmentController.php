@@ -13,7 +13,7 @@ class EnrollmentController extends Controller
     public function index()
     {
         $enrollments = Enrollment::all();
-        return view('enrollments.index')->with('enrollemnts',$enrollments);
+        return view('enrollments.index')->with('enrollments',$enrollments);
     }
 
     /**
@@ -69,6 +69,6 @@ class EnrollmentController extends Controller
     public function destroy(string $id)
     {
         Enrollment::destroy($id);
-        return redirect('enrollment')-with('flash_message','seccessfully deleted');
+        return redirect('enrollments')->with('flash_message','Enrollment Deleted!');
     }
 }
