@@ -48,8 +48,8 @@ class EnrollmentController extends Controller
      */
     public function edit(string $id)
     {
-        $enrollement = Enrollment::find($id);
-        return view('enrollments.edit')->with('enrollement',$enrollement);
+        $enrollments = Enrollment::find($id);
+        return view('enrollments.edit')->with('enrollments',$enrollments);
     }
 
     /**
@@ -60,7 +60,7 @@ class EnrollmentController extends Controller
         $enrollement = Enrollment::find($id);
         $input = $request->all();
         $enrollement->update($input);
-        return view('enrollments')->with('flash_message','Enrollment updated!');
+        return redirect('enrollments')->with('flash_message','Enrollment updated!');
     }
 
     /**

@@ -12,7 +12,7 @@
         <label>Name</label></br>
         <input type="text" name="name" id="name" value="{{$batches->name}}" class="form-control"></br>
         <label>Course Id</label></br>
-        <input type="text" name="course_id" id="course_id" value="{{$batches->course_id}}" class="form-control"></br>
+        <input type="text" name="course_id" id="course_id" value="{{$batches->course->name}}" class="form-control"></br>
         <label>Start Id</label></br>
         <input type="text" name="start_date" id="start_date" value="{{$batches->start_date}}" class="form-control"></br>
         <input type="submit" value="Update" class="btn btn-success"></br>
