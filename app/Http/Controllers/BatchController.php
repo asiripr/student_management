@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Batch;
+use App\Models\Course;
 
 class BatchController extends Controller
 {
@@ -21,7 +22,10 @@ class BatchController extends Controller
      */
     public function create()
     {
-        return view('batches.create');
+        $courses = Course::pluck('name','id');
+        return view('batches.create', compact('courses'));
+
+        // return view('batches.create'); this is the simple
     }
 
     /**
