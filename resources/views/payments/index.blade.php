@@ -15,9 +15,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Syllabus</th>
-                            <th>Duration</th>
+                            <th>Enrollment Number</th>
+                            <th>Paid Date</th>
+                            <th>Amount</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -26,7 +26,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->syllabus }}</td>
+                                <td>{{ $item->enrollment->enroll_no }}</td>
                                 <td>{{ $item->duration() }}</td>
 
                                 <td>
