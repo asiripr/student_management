@@ -2,10 +2,10 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h2>Courses Application</h2>
+            <h2>Payment Application</h2>
         </div>
         <div class="card-body">
-            <a href="{{ url('/courses/create') }}" class="btn btn-success btn-sm" title="Add New Course">
+            <a href="{{ url('/payments/create') }}" class="btn btn-success btn-sm" title="Add New payment">
                 <i class="fa fa-plus" aria-hidden="true"></i> Add New
             </a>
             <br />
@@ -22,27 +22,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($courses as $item)
+                        @foreach ($payments as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->name }}</td>
                                 <td>{{ $item->enrollment->enroll_no }}</td>
-                                <td>{{ $item->duration() }}</td>
+                                <td>{{ $item->paid_date }}</td>
+                                <td>{{ $item->amount }}</td>
 
                                 <td>
-                                    <a href="{{ url('/courses/' . $item->id) }}" title="View Course"><button
+                                    <a href="{{ url('/payments/' . $item->id) }}" title="View payment"><button
                                             class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>
                                             View</button></a>
-                                    <a href="{{ url('/courses/' . $item->id . '/edit') }}" title="Edit Course"><button
+                                    <a href="{{ url('/payments/' . $item->id . '/edit') }}" title="Edit payment"><button
                                             class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>
                                             Edit</button></a>
 
-                                    <form method="POST" action="{{ url('/courses' . '/' . $item->id) }}" 
+                                    <form method="POST" action="{{ url('/payments' . '/' . $item->id) }}" 
                                         accept-charset="UTF-8" style="display:inline">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete Course"
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Delete payment"
                                             onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o"
                                                 aria-hidden="true"></i> Delete</button>
                                     </form>
