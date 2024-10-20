@@ -46,6 +46,7 @@
                                             onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o"
                                                 aria-hidden="true"></i> Delete</button>
                                     </form>
+                                    <a><button></a>
                                 </td>
                             </tr>
                         @endforeach
