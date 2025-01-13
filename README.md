@@ -1,19 +1,13 @@
 # Student Management System
-==========================
 
 A comprehensive student management system developed using PHP Laravel and MySQL. This system is designed to efficiently manage student data, track academic progress, and streamline administrative tasks.
 
 ## Features
------------
 
 - **Student Profile Management**: Create, update, and manage student profiles.
 - **Course Management**: Add, edit, and assign courses to students.
-- **Grade Tracking**: Record and track student grades across different courses.
-- **User Roles**: Support for multiple user roles (e.g., admin, teacher, student).
-- **Secure Authentication**: Robust login and registration system with password hashing.
 
 ## Requirements
-------------
 
 - **PHP**: Version 8.0 or higher
 - **Laravel**: Version 10.x or higher
@@ -21,7 +15,6 @@ A comprehensive student management system developed using PHP Laravel and MySQL.
 - **Composer**: For dependency management
 
 ## Installation
-------------
 
 1. **Clone the Repository**:
    ```bash
@@ -63,24 +56,10 @@ A comprehensive student management system developed using PHP Laravel and MySQL.
    ```
 
 ## Usage
------
 
 - Access the application at `http://127.0.0.1:8000`.
 - Use the login credentials created during setup or register a new user.
 
 ## Contributing
-------------
 
 Contributions are welcome! Please submit pull requests with detailed explanations of changes.
-
-## License
--------
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-Feel free to customize this template to better fit your project's specific needs and features.
-
-Citations:
-[1] https://github.com/asiripr/student_management
